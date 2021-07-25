@@ -1,0 +1,21 @@
+name: Build and Release resume
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+jobs:
+  build_latex:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Git repository
+        uses: actions/checkout@v2
+      - name: Compile LaTeX document
+        uses: xu-cheng/latex-action@v2
+        with:
+          root_file: AndreaPusineri_CV.tex
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: AndreaPusineri_CV.pdf
+        env:
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}

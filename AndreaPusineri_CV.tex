@@ -1,0 +1,112 @@
+%%%%%%%%%%%%%%%%%
+%% This is an example CV created using altacv.cls (v1.1.5, 1 December 2018) written by
+%% LianTze Lim (liantze@gmail.com), based on the
+%% Cv created by BusinessInsider at http://www.businessinsider.my/a-sample-resume-for-marissa-mayer-2016-7/?r=US&IR=T
+%%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+% I used Nishant Pandey's Résumé as template, you can find it at overleaf.com/articles/nishant-pandeys-resume/vqvgfpsqjddt
+
+\documentclass[10pt,a4paper]{altacv}
+\usepackage{hyperref}
+
+% Change the page layout if you need to
+\geometry{left=2cm,right=10cm,marginparwidth=6.8cm,marginparsep=1.2cm,top=1.25cm,bottom=1.25cm}
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+\ifxetexorluatex
+  % If using xelatex or lualatex:
+  \setmainfont{Carlito}
+\else
+  % If using pdflatex:
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+  \usepackage[default]{lato}
+\fi
+
+% Change the colours if you want to
+\definecolor{VividPurple}{HTML}{000000}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{2E2E2E}
+\colorlet{heading}{VividPurple}
+\colorlet{accent}{VividPurple}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+\begin{document}
+\name{Andrea Pusineri}
+\tagline{Computer Engineering Student at University of Pavia}
+\personalinfo{%
+  % You can add your own with \printinfo{symbol}{detail}
+  \location{Pavia, Italy}
+  \email{pusineriandrea@gmail.com}
+  \homepage{\href{https://pusi77.github.io/}{pusi77.github.io}}
+  \github{\href{https://github.com/pusi77}{@pusi77}}
+  \telegram{\href{https://t.me/pusi77}{@pusi77}}
+}
+
+%% Make the header extend all the way to the right, if you want.
+\begin{fullwidth}
+\makecvheader
+\end{fullwidth}
+
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+%\AtBeginEnvironment{itemize}{\small}
+
+\cvsection[sidebar]{Experience}
+\cvevent{Bachelor Thesis Internship}{beSharp}{May 2021 -- July 2021}{Pavia,Italy}
+\begin{itemize}
+\item Design and development of Alibaba Cloud integration within \href{https://www.leapp.cloud}{Noovolari Leapp}.
+\smallskip
+\item Experience with Go design and testing of REST API backend server.
+\smallskip
+\item Experience with AWS and Alibaba cloud, focusing on access management.
+\smallskip
+\end{itemize}
+
+
+\cvsection{Education}
+\cvevent{Bachelor in Computer Engineering}{University of Pavia}{ October 2018 -- Present }{}
+\smallskip
+\cvevent{High School Diploma}{Liceo Scientifico N. Copernico}{ September 2012 -- June 2017 }{}
+\smallskip
+\cvevent{B2 English Course}{Kent School of English}{ April 2014 }{}
+\smallskip
+
+%\cvsection{Achievements}
+%\smallskip
+%\begin{itemize}
+%\item ¯\_(ツ)_/¯
+%\end{itemize}
+
+\cvsection{SKILLS}
+\cvproject{Programming Languages}
+\begin{itemize}
+ \item \cvskill{Go}{4}
+ \item \cvskill{Python}{3}
+ \item \cvskill{Java}{3}
+ \item \cvskill{Bash}{2}
+ \item \cvskill{C}{2}
+ \item \cvskill{MIPS Assembly}{2}
+\end{itemize}
+\smallskip
+\begin{description}
+ \item \textbf{OS}: GNU/Linux (Fedora, Ubuntu, Debian), Windows.
+ \item \textbf{Cloud}: AWS, Alibaba Cloud.
+ \item \textbf{DevOps}: Docker, Docker-compose, Github Actions.
+ \item \textbf{Others}: Git, SQL, Jekyll, LaTeX.
+\end{description}
+\end{document}
